@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 현재 파일",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "pca",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "--data_cluster", "atomic",
+                "--model", "bertsentence",
+                "--cluster", "2",
+                "--data", "context",
+                "--dim", "5",
+                "--bert_model_name", "bert-large-nli-mean-tokens"
+            ]
+        },
+        {
+            "name": "plot_corr",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "--data", "userstudy",
+                "--model", "use_hub"
+            ]
+        },
+        {
+            "name": "BERTScore",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": true,
+            "args": [
+                "--model", "atomicVerbs_bertsentenceEmbedding_bert-large-nli-mean-tokens_Cluster2_Embdim5_PCA.p"
+            ]
+        }
+    ]
+}
